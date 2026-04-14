@@ -206,7 +206,7 @@ function App() {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Falar com Cris 🇧🇷</h1>
+          <h1>Falar com Cris <span>🇧🇷</span></h1>
           {renderNavigation('grid')}
           <div className="category-filter">
             <button
@@ -247,7 +247,7 @@ function App() {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Falar com Cris 🇧🇷</h1>
+          <h1>Falar com Cris <span>🇧🇷</span></h1>
           {renderNavigation('quiz-pt-en')}
         </header>
         <main className="app-main">
@@ -267,7 +267,7 @@ function App() {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Falar com Cris 🇧🇷</h1>
+          <h1>Falar com Cris <span>🇧🇷</span></h1>
           {renderNavigation('quiz-en-pt')}
         </header>
         <main className="app-main">
@@ -285,7 +285,7 @@ function App() {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Falar com Cris 🇧🇷</h1>
+          <h1>Falar com Cris <span>🇧🇷</span></h1>
           {renderNavigation('pronunciation')}
         </header>
         <main className="app-main">
@@ -381,7 +381,7 @@ function App() {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Falar com Cris 🇧🇷</h1>
+          <h1>Falar com Cris <span>🇧🇷</span></h1>
           {renderNavigation('stats')}
         </header>
         <main className="app-main">
@@ -415,7 +415,7 @@ function App() {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Falar com Cris 🇧🇷</h1>
+          <h1>Falar com Cris <span>🇧🇷</span></h1>
           {renderNavigation('achievements')}
         </header>
         <main className="app-main">
@@ -446,7 +446,7 @@ function App() {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Falar com Cris 🇧🇷</h1>
+          <h1>Falar com Cris <span>🇧🇷</span></h1>
           {renderNavigation('translator')}
         </header>
         <main className="app-main">
@@ -459,7 +459,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Falar com Cris 🇧🇷</h1>
+        <h1>Falar com Cris <span>🇧🇷</span></h1>
         {renderNavigation('learn')}
       </header>
 
