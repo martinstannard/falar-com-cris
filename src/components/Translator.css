@@ -15,9 +15,36 @@
 .translator-card h2 {
   font-family: var(--font-display);
   font-size: var(--font-size-2xl);
-  margin-bottom: var(--space-xs);
   color: var(--color-primary);
-  text-align: center;
+  margin: 0;
+}
+
+.translator-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+  gap: var(--space-md);
+}
+
+.btn-toggle-mode {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+  border: 2px solid var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-base);
+}
+
+.btn-toggle-mode:hover {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-primary);
+  color: var(--color-text-primary);
+  transform: translateY(-1px);
 }
 
 .translator-subtitle {
