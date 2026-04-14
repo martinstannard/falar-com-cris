@@ -2,6 +2,10 @@
 
 A beautiful, feature-rich Brazilian Portuguese learning app with spaced repetition, quizzes, and pronunciation practice. Built with React, TypeScript, and the Dracula theme.
 
+**🌐 Live Demo**: [https://port-omega-ten-61.vercel.app](https://port-omega-ten-61.vercel.app)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/martinstannard/falar-com-cris)
+
 ## Features
 
 ### 🎴 Multiple Learning Modes
