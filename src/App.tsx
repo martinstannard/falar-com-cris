@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FlashCard } from './components/FlashCard';
 import { GridFlashCards } from './components/GridFlashCards';
+import { Translator } from './components/Translator';
 import { Quiz } from './components/Quiz';
 import type { AppState, Review, Phrase } from './types';
 import { loadState, saveState } from './utils/storage';
@@ -9,7 +10,7 @@ import { useAudio } from './hooks/useAudio';
 import { useSpeechRecognition, compareTranscripts, checkSpeechRecognitionSupport } from './hooks/useSpeechRecognition';
 import './App.css';
 
-type ViewType = 'learn' | 'grid' | 'quiz-pt-en' | 'quiz-en-pt' | 'pronunciation' | 'stats' | 'achievements';
+type ViewType = 'learn' | 'grid' | 'quiz-pt-en' | 'quiz-en-pt' | 'pronunciation' | 'stats' | 'achievements' | 'translator';
 
 function App() {
   const [state, setState] = useState<AppState>(loadState());
@@ -188,6 +189,9 @@ function App() {
       </button>
       <button onClick={() => setView('pronunciation')} className={`nav-btn ${currentView === 'pronunciation' ? 'active' : ''}`}>
         🎤 Speak
+      </button>
+      <button onClick={() => setView('translator')} className={`nav-btn ${currentView === 'translator' ? 'active' : ''}`}>
+        🇧🇷 Translate
       </button>
       <button onClick={() => setView('stats')} className={`nav-btn ${currentView === 'stats' ? 'active' : ''}`}>
         Stats
@@ -433,6 +437,20 @@ function App() {
               ))}
             </div>
           </div>
+        </main>
+      </div>
+    );
+  }
+
+  if (view === 'translator') {
+    return (
+      <div className="app">
+        <header className="app-header">
+          <h1>Falar com Cris 🇧🇷</h1>
+          {renderNavigation('translator')}
+        </header>
+        <main className="app-main">
+          <Translator />
         </main>
       </div>
     );
