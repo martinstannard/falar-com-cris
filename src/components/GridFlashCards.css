@@ -1,0 +1,112 @@
+.grid-flashcards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-card {
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.grid-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-card);
+  transform-style: preserve-3d;
+}
+
+.grid-card.flipped .grid-card-inner {
+  transform: rotateY(180deg);
+}
+
+.grid-card-front,
+.grid-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg);
+  gap: var(--space-sm);
+}
+
+.grid-card-back {
+  transform: rotateY(180deg);
+}
+
+.grid-card-category {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  position: absolute;
+  top: var(--space-md);
+}
+
+.grid-card-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.grid-card-original {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.audio-btn-small {
+  position: absolute;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.audio-btn-small:hover {
+  transform: scale(1.1);
+  background: var(--color-primary-dark);
+}
+
+.audio-btn-small:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .grid-flashcards {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .grid-card {
+    height: 150px;
+  }
+
+  .grid-card-text {
+    font-size: var(--font-size-lg);
+  }
+}
